@@ -1,0 +1,23 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 5.5rem;
+  background: #000;
+  padding: 0 15px;
+}
+
+.img {
+  justify-items: flex-start;
+}
+.header-img img {
+  width: 125px;
+  height: 29px;
+}
+
+@media screen and (max-width: 1024px) {
+  .img {
+    display: none;
+  }
+}

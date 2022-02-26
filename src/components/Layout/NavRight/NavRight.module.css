@@ -1,0 +1,94 @@
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-right button {
+  font-size: 1.6rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  margin: 0 18px;
+  padding: 8px 16px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.nav-right button:hover {
+  background-color: #e65b00;
+  transition: all 0.2 ease-in;
+}
+
+.icon {
+  color: #fff;
+  width: 24px;
+  height: 55px;
+  cursor: pointer;
+}
+.menu {
+  color: #fff;
+  width: 30px;
+  height: 55px;
+  cursor: pointer;
+  display: none;
+}
+.nav-right p {
+  font-size: 1.6rem;
+  color: var(--text-color);
+}
+.nav-right p:hover {
+  cursor: pointer;
+  color: var(--primary-color);
+  transition: 0.4s;
+}
+
+.container {
+  position: fixed;
+  z-index: 30;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: white;
+  padding: 0 20px;
+  box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.25);
+  animation: slide-left 300ms ease-out forwards;
+}
+
+.container li {
+  list-style: none;
+  padding: 10px 0;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.container li:hover {
+  color: var(--primary-color);
+  transition: all 0.3s ease-in;
+}
+
+@keyframes slide-left {
+  from {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .nav-right button {
+    display: none;
+  }
+  .icon {
+    display: none;
+  }
+  .menu {
+    display: block;
+    margin-left: 10px;
+  }
+}

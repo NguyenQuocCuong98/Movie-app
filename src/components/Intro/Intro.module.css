@@ -1,0 +1,81 @@
+.introContainer {
+  background-color: #fff;
+  position: relative;
+  color: var(--text-color);
+  padding-top: 56%;
+}
+
+.videoIntro {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.introList {
+  position: absolute;
+  bottom: 100px;
+  left: 30px;
+}
+
+.introList h1 {
+  font-size: 6rem;
+  transition: all 0.3s ease;
+}
+.introList p {
+  max-width: 550px;
+  width: 100%;
+  line-height: 1.3;
+  padding-top: 10px;
+  font-size: 1.8rem;
+}
+
+.volume {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  bottom: 5px;
+  right: 10px;
+  cursor: pointer;
+  border: 1px solid #fff;
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  transform: scale(0.9);
+}
+.volume:hover {
+  color: #fff;
+  transform: scale(1);
+  background-color: rgba(255, 255, 255, 0.18);
+}
+
+@media screen and (max-width: 1140px) {
+  .introList {
+    bottom: 80px;
+  }
+  .introList h1 {
+    font-size: 4rem;
+  }
+  .introList p {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .introList {
+    bottom: 40px;
+    left: 20px;
+  }
+  .introList h1 {
+    font-size: 2.4rem;
+  }
+  .introList p {
+    padding-top: 0;
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .introList {
+    bottom: 10px;
+  }
+}
