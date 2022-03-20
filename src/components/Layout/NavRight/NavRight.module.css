@@ -13,7 +13,7 @@
   border: none;
   cursor: pointer;
   border-radius: 8px;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .nav-right button:hover {
@@ -35,7 +35,7 @@
   display: none;
 }
 .nav-right p {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   color: var(--text-color);
 }
 .nav-right p:hover {

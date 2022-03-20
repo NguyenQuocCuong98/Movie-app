@@ -1,4 +1,7 @@
 .header {
+  position: fixed;
+  z-index: 20;
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -10,10 +13,11 @@
 
 .img {
   justify-items: flex-start;
+  margin-top: 3px;
 }
 .header-img img {
   width: 125px;
-  height: 29px;
+  height: 30px;
 }
 
 @media screen and (max-width: 1024px) {
