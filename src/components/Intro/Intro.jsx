@@ -58,7 +58,7 @@ const Intro = () => {
       <div className={classes.content}>
         <div className={classes.info}>
           <h1>{banner?.title}</h1>
-          <p>{banner?.overview}</p>
+          <p className={classes.overview}>{banner?.overview}</p>
           <div className={classes.button}>
             <button>
               <PlayIcon className={classes.icon} />

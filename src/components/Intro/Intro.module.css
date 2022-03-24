@@ -27,7 +27,7 @@
   color: #fff;
 }
 
-.info p {
+.overview {
   width: 550px;
   font-size: 2rem;
   color: #fff;
@@ -58,10 +58,11 @@
 
 .button p {
   font-size: 1.8rem;
+  margin-left: 8px;
 }
 
 .icon {
-  width: 100%;
+  width: 30px;
   height: 100%;
 }
 
@@ -86,6 +87,35 @@
     rgb(17, 17, 17),
     rgba(17, 17, 17)
   );
+}
+
+@media screen and (max-width: 1024px) {
+  .poster {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .info h1 {
+    font-size: 2.8rem;
+    color: #fff;
+  }
+
+  .overview {
+    display: none;
+  }
+  .button button {
+    width: 120px;
+    height: 30px;
+  }
+
+  .icon {
+    width: 15px;
+  }
+
+  .button p {
+    font-size: 1.2rem;
+  }
 }
 
 @-webkit-keyframes fadeInDown {
