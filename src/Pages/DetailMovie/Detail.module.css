@@ -1,4 +1,5 @@
 .detail {
+  overflow: hidden;
   cursor: pointer;
   position: relative;
   padding-top: 50%;
@@ -28,7 +29,7 @@
   background: linear-gradient(#232a2f, #14171b);
   border-radius: 50%;
   position: absolute;
-  top: 40%;
+  top: 35%;
   left: 50%;
   margin-top: -40px;
   margin-left: -40px;
@@ -52,17 +53,297 @@
 }
 
 .listMovie {
+  max-width: 1370px;
+  width: 100%;
   position: absolute;
+  top: 65rem;
   bottom: 0;
+  left: 0;
+  right: 0;
   z-index: 10;
-  display: flex;
+  margin: 0 auto;
 }
 
 .imageMovie {
-  width: 200px;
+  width: 197px;
   height: 295px;
   border-radius: 5px;
+  object-fit: cover;
 }
+
+.wrapper {
+  display: flex;
+}
+
+.information {
+  margin-left: 15px;
+}
+
+h1 {
+  font-size: 24px;
+  color: #fff;
+}
+
+.buy {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+.vip {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 16px;
+  width: 215px;
+  height: 40px;
+  border-radius: 6px;
+  border: none;
+  margin-bottom: 13px;
+  color: #fff;
+  background-color: #1a93f6;
+  border-color: #1a93f6;
+  cursor: pointer;
+}
+
+.phone {
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  width: 265px;
+  height: 40px;
+  border-radius: 6px;
+  border: none;
+  color: #fff;
+  background-color: #1a93f6;
+  border-color: #1a93f6;
+}
+
+.phone:hover,
+.vip:hover {
+  background: #111;
+  background-color: #0980e1;
+  border-color: #0879d5;
+  transition: 0.4s;
+}
+
+.heart {
+  margin-right: 8px;
+  padding-left: 20px;
+  border: none;
+  width: 128px;
+  height: 36px;
+  transition: 0.4s;
+  background: linear-gradient(90deg, #252728, #3f4143);
+  color: #fff;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.heart > i {
+  color: #fff;
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.btnUser {
+  display: flex;
+}
+
+.nodes {
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  background-color: #ff6500;
+  width: 128px;
+  height: 36px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.nodes > i {
+  color: #fff;
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.nodes:hover {
+  color: #fff;
+  background-color: #d95600;
+}
+
+.description {
+  margin-top: 10px;
+  max-width: 600px;
+  width: 100%;
+}
+
+h3 {
+  font-size: 14px;
+  color: #fff;
+}
+
+p {
+  font-size: 14px;
+  color: #828282;
+}
+
+.container {
+  display: flex;
+}
+
+.author {
+  margin-top: 10px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.time {
+  max-width: 80px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.timeDes {
+  display: flex;
+  flex-direction: column;
+}
+
+span {
+  margin-left: 20px;
+  font-size: 14px;
+  color: #828282;
+}
+
+span:hover {
+  color: #ff6500;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+h4 {
+  font-size: 14px;
+  color: #fff;
+}
+
+.production {
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 1670px) {
+  .listMovie {
+    top: 48rem;
+  }
+}
+
+@media screen and (max-width: 1570px) {
+  .listMovie {
+    top: 43rem;
+  }
+}
+@media screen and (max-width: 1430px) {
+  .listMovie {
+    top: 40rem;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .listMovie {
+    top: 38rem;
+  }
+
+  .description {
+    max-width: 500px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1345px) {
+  .listMovie {
+    top: 36rem;
+  }
+
+  .description {
+    max-width: 550px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .listMovie {
+    top: 34rem;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .play {
+    top: 25%;
+  }
+  .listMovie {
+    top: 30rem;
+  }
+  .container {
+    margin: 0 35px;
+  }
+  .imageMovie {
+    width: 160px;
+    height: 240px;
+  }
+}
+
+@media screen and (max-width: 1180px) {
+  .container {
+    margin: 0 25px;
+  }
+  .listMovie {
+    top: 25rem;
+  }
+}
+
+@media screen and (max-width: 1117px) {
+  .container {
+    margin: 0 15px;
+  }
+  .play {
+    top: 21%;
+  }
+  .listMovie {
+    top: 22rem;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .play {
+    top: 42%;
+  }
+  .listMovie {
+    top: 30rem;
+  }
+  .container {
+    flex-direction: column;
+  }
+
+  .imageMovie {
+    width: 240px;
+    height: 360px;
+  }
+
+  .timeDes {
+    max-width: 350px;
+    width: 100%;
+  }
+
+  .author {
+    margin-left: 15px;
+  }
+}
+
 @-webkit-keyframes fadeInDown {
   0% {
     opacity: 0;
