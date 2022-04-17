@@ -8,6 +8,8 @@ import { Col, Row } from "antd";
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router";
 
+import Cast from "../../components/Cast/Cast";
+import Similar from "../../components/Similar/Similar";
 import classes from "../DetailMovie/Detail.module.css";
 
 const DetailMovie = () => {
@@ -103,7 +105,7 @@ const DetailMovie = () => {
                 </div>
               </div>
             </Col>
-            <Col xl={4}>
+            <Col sm={24} md={24} lg={24} xl={4}>
               <div className={classes.author}>
                 <div className={classes.time}>
                   <h4>Time</h4>
@@ -137,6 +139,10 @@ const DetailMovie = () => {
             </Col>
           </div>
         </Row>
+        <div className={classes.similar}>
+          <Similar />
+        </div>
+        <Cast />
       </div>
     </section>
   );

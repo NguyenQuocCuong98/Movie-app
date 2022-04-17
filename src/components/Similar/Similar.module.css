@@ -1,4 +1,4 @@
-.movie-item {
+.similar-item {
   position: relative;
   overflow: hidden;
   flex-direction: column;
@@ -48,7 +48,6 @@
 }
 
 .info {
-  padding: 0 5px;
   display: flex;
   border-radius: 8px;
   max-width: 55px;
@@ -58,7 +57,6 @@
 }
 .info span {
   margin: 0;
-
   color: var(--text-color);
   font-weight: bold;
 }

@@ -1,16 +1,16 @@
 .detail {
-  overflow: hidden;
   cursor: pointer;
   position: relative;
   padding-top: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: fadeInDown cubic-bezier(0.39, 0.58, 0.57, 1) 2s forwards;
+  animation: fadeInDown cubic-bezier(0.39, 0.58, 0.57, 1) 3s forwards;
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 10;
+  overflow: hidden;
 }
 
 .detail::before {
@@ -53,15 +53,15 @@
 }
 
 .listMovie {
-  max-width: 1370px;
-  width: 100%;
+  width: 1370px;
+  max-width: calc(100% - 32px);
+  margin: 0 auto;
   position: absolute;
   top: 65rem;
   bottom: 0;
   left: 0;
   right: 0;
   z-index: 10;
-  margin: 0 auto;
 }
 
 .imageMovie {
@@ -236,6 +236,10 @@ h4 {
   flex-direction: row;
 }
 
+.similar {
+  margin-top: 80px;
+}
+
 @media screen and (max-width: 1670px) {
   .listMovie {
     top: 48rem;
@@ -341,6 +345,34 @@ h4 {
 
   .author {
     margin-left: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .information,
+  .author {
+    margin-left: 0;
+  }
+  .container {
+    margin: 0;
+  }
+  .imageMovie {
+    width: 180px;
+    height: 270px;
+  }
+
+  .listMovie {
+    top: 26rem;
+  }
+
+  .similar {
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .imageMovie {
+    display: none;
   }
 }
 

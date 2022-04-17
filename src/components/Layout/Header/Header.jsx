@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import MainMenu from "../NavMenu/MainMenu";
 import NavRight from "../NavRight/NavRight";
 import React from "react";
@@ -9,7 +10,9 @@ const Header = () => {
     <header className={classes.header}>
       {/* Logo */}
       <div className={classes.img}>
-        <img src={logo} alt="Logo FPT" />
+        <Link to="/">
+          <img src={logo} alt="Logo FPT" />
+        </Link>
       </div>
       {/* Nav menu*/}
       <MainMenu />
