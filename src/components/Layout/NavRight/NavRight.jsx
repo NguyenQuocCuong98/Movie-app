@@ -1,35 +1,38 @@
-import React, { useState } from "react";
-import classes from "../../Layout/NavRight/NavRight.module.css";
 import { MenuIcon, SearchIcon } from "@heroicons/react/solid";
+import React, { useState } from "react";
+
+import { Link } from "react-router-dom";
 import Modal from "../../UI/Modal";
+import classes from "../../Layout/NavRight/NavRight.module.css";
+
 const NavRight = () => {
   const [showMenu, setShowMenu] = useState(false);
   return (
     <div className={classes["nav-right"]}>
       <SearchIcon className={classes.icon} />
-      <button>Mua Gói</button>
-      <p>Đăng nhập</p>
+      <button>Buy Package</button>
+      <Link to={"/login"} style={{ textDecoration: "none" }}>
+        {" "}
+        <p>Login</p>
+      </Link>
       <MenuIcon className={classes.menu} onClick={() => setShowMenu(true)} />
       {showMenu && (
         <Modal onClose={() => setShowMenu(false)}>
           <div className={classes.container}>
             <li>
-              <a>Trang chủ</a>
+              <a>Movie</a>
             </li>
             <li>
-              <a>Phim bộ</a>
+              <a>Film</a>
             </li>
             <li>
-              <a>Điện ảnh</a>
+              <a>Asia</a>
             </li>
             <li>
-              <a>Châu Á</a>
+              <a>Documents</a>
             </li>
             <li>
-              <a>Tài liệu</a>
-            </li>
-            <li>
-              <a>Thiếu nhi & Gia đình</a>
+              <a>Children & Families</a>
             </li>
           </div>
         </Modal>
