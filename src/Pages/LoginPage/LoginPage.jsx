@@ -1,7 +1,9 @@
+import React, { useState } from "react";
+
 import Header from "../../components/Layout/Header/Header";
 import LoginForm from "../../components/LoginForm/LoginForm";
-import React from "react";
 import classes from "./../LoginPage/LoginPage.module.css";
+
 const LoginPage = () => {
   return (
     <>
