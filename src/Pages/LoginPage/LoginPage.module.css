@@ -29,102 +29,7 @@ h1 {
   text-align: center;
   border-bottom-width: 1px;
   border-bottom-style: solid;
-<<<<<<< HEAD
-  line-height: 0.1rem;
-  margin-top: 15px;
-}
 
-.btn-internet {
-  margin-top: 25px;
-}
-.btn-login {
-  color: #fff;
-  background-color: #ff6500;
-  border-color: #ff6500;
-  font-weight: 600;
-}
-
-.btn-login:hover {
-  cursor: pointer;
-  color: #fff;
-  background-color: #d95600;
-  border-color: #cc5100;
-}
-
-.btn-facebook {
-  margin-bottom: 10px;
-  background-color: #4267b2;
-  cursor: pointer;
-  font-weight: 600;
-}
-
-.btn-facebook:hover {
-  background-color: #2d477a;
-}
-
-.btn-google {
-  background-color: #dd4b39;
-  cursor: pointer;
-  font-weight: 600;
-}
-
-.btn-google:hover {
-  background-color: #ac2d1e;
-}
-
-.form-register {
-  display: flex;
-  justify-content: center;
-  margin-top: 15px;
-}
-
-p {
-  font-size: 15px;
-}
-
-.or {
-  margin-left: 0;
-  padding: 0 10px;
-  background-color: #1a1919 !important;
-  border-radius: 12px;
-}
-
-.account {
-  margin-right: 6px;
-  font-size: 15px;
-}
-
-.forgot,
-.register {
-  font-size: 15px;
-  color: #b4b4b4;
-}
-
-.form-rules {
-  margin-top: 5px;
-}
-
-.rules {
-  font-size: 15px;
-  color: #b4b4b4;
-}
-span {
-  margin-left: 0;
-}
-input {
-  outline: none;
-  height: 40px;
-  margin-bottom: 15px;
-  padding-left: 10px;
-  border-radius: 4px;
-}
-input:focus {
-  border-color: #fd9b5a;
-  box-shadow: 0 0 0 0.2rem rgb(255 101 0 / 25%);
-}
-
-button {
-=======
   border-color: #353535;
   line-height: 0.1rem;
   margin: 17px 0 20px;
@@ -132,7 +37,6 @@ button {
 
 .form-btn {
   cursor: pointer;
->>>>>>> origin/master
   width: 100%;
   height: 40px;
   color: #fff;

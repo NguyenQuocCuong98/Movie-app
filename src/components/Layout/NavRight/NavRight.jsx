@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Modal from "../../UI/Modal";
 import classes from "../../Layout/NavRight/NavRight.module.css";
-import { selectUser } from "../../../Redux/user-slice";
+import { selectUser } from "../../../Redux/User-slice";
 import { useSelector } from "react-redux";
 
 const NavRight = () => {

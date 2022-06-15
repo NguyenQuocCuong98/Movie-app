@@ -1,4 +1,3 @@
-import Form from "../UI/Form-Info/Form";
 import FormInfo from "../FormInfo/FormInfo";
 import React from "react";
 import classes from "../ProfileContent/ProfileContent.module.css";

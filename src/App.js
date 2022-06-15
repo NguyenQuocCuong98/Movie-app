@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import { login, logout } from "./Redux/user-slice";
+import { login, logout } from "./Redux/User-slice";
 
 import Header from "./components/Layout/Header/Header";
 import { auth } from "./firebase/firebase";
