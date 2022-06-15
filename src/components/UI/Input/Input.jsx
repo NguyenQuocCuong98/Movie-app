@@ -1,15 +1,14 @@
 import React from "react";
-import classes from "./../Input/Input.module.css";
 
-const Input = ({ type, placeholder, onChange, value, onBlur }) => {
+const Input = ({ type, placeholder, onChange, value }) => {
   return (
     <>
       <input
+        style={{ width: "100%" }}
         type={type}
         placeholder={placeholder}
         onChange={onChange}
         value={value}
-        onBlur={onBlur}
       />
     </>
   );

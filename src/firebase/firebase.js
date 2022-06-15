@@ -3,7 +3,9 @@
 import {
   FacebookAuthProvider,
   GoogleAuthProvider,
+  createUserWithEmailAndPassword,
   getAuth,
+  signInWithEmailAndPassword,
 } from "firebase/auth";
 
 // Your web app's Firebase configuration
@@ -17,7 +19,7 @@ const firebaseConfig = {
   projectId: "movie-app-cd67f",
   storageBucket: "movie-app-cd67f.appspot.com",
   messagingSenderId: "308356270969",
-  appId: "1:308356270969:web:293f360df235faeef03da8",
+  appId: "1:308356270969:web:5466c2b4041aa862f03da8",
 };
 
 // Initialize Firebase
@@ -26,3 +28,9 @@ export const auth = getAuth();
 export const db = getFirestore(app);
 export const googleProvider = new GoogleAuthProvider();
 export const facebookProvider = new FacebookAuthProvider();
+export const login = (email, password) => {
+  return signInWithEmailAndPassword(auth, email, password);
+};
+export const register = (email, password) => {
+  return createUserWithEmailAndPassword(auth, email, password);
+};

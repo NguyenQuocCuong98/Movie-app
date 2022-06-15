@@ -1,0 +1,76 @@
+.container-infor {
+  position: relative;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.wrapper {
+  display: flex;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.infor {
+  margin-top: 25px;
+}
+.infor-avatar {
+  max-width: 115px;
+  max-height: 115px;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  margin-left: 5px;
+}
+.infor-detail {
+}
+
+.infor-detail__email {
+  font-size: 30px;
+  color: #fff;
+}
+
+.infor-detail__list {
+  display: flex;
+  align-items: center;
+}
+.block {
+  width: 1px;
+  height: 20px;
+  background: #828282;
+  margin: 0 15px;
+}
+
+.infor-detail__rank,
+.infor-detail__point {
+  color: #fff;
+  font-size: 20px;
+}
+
+.btn-infor {
+  position: absolute;
+  right: 0;
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  max-width: 185px;
+  width: 100%;
+  height: 40px;
+}
+
+.btn-infor i {
+  font-size: 20px;
+  margin-left: 15px;
+}
+
+.btn-infor p {
+  font-size: 20px;
+  color: #fff;
+  padding: 5px;
+}
+
+.form-info {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 35px;
+}
