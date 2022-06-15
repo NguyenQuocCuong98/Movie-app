@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 import { Link, useNavigate } from "react-router-dom";
 import React, { useState } from "react";
-import {
-  signInWithPopup,
-} from "firebase/auth";
 import {
   facebookProvider,
   googleProvider,
@@ -16,14 +12,8 @@ import Input from "../../components/UI/Input/Input";
 import { addUser } from "../../actions/storeActions";
 import { auth } from "../../firebase/firebase";
 import classes from "./../LoginPage/LoginPage.module.css";
+import { signInWithPopup } from "firebase/auth";
 import { toast } from "react-toastify";
-=======
-import Button from "../../components/UI/Button/Button";
-import Header from "../../components/Layout/Header/Header";
-import Input from "../../components/UI/Input/Input";
-import React from "react";
-import classes from "./../LoginPage/LoginPage.module.css";
->>>>>>> origin/master
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
@@ -61,53 +51,30 @@ const LoginPage = () => {
     setLoading(false);
   };
 
-  const handlerSignIn = async (Provider) => {
-    try {
-      setLoading(true);
-      const { _tokenResponse, user } = await signInWithPopup(auth, Provider);
-      const { displayName, email, photoURL, uid } = user;
-      if (_tokenResponse.isNewUser) {
-        await addUser({ displayName, email, photoURL, uid });
-      }
-      setLoading(false);
-    } catch (error) {
-      toast.error(error.message);
-    }
-  };
+  // const handlerSignIn = async (Provider) => {
+  //   try {
+  //     setLoading(true);
+  //     const { _tokenResponse, user } = await signInWithPopup(auth, Provider);
+  //     const { displayName, email, photoURL, uid } = user;
+  //     if (_tokenResponse.isNewUser) {
+  //       await addUser({ displayName, email, photoURL, uid });
+  //     }
+  //     setLoading(false);
+  //   } catch (error) {
+  //     toast.error(error.message);
+  //   }
+  // };
   return (
     <>
       <Header />
       <div className={classes["form-login"]}>
         <h1>Login</h1>
-<<<<<<< HEAD
-        <form className={classes["form-control"]}>
-          <div>
-            <Input
-              type="text"
-              placeholder="Email"
-              onChange={emailInputChangeHandler}
-              value={email}
-            />
-            <Input
-              type="password"
-              placeholder="Password"
-              onChange={passwordInputChangeHandler}
-              value={password}
-            />
-            <div className={classes["form-btn"]}>
-              <Button
-                onClick={signInHandler}
-                type="submit"
-                className={classes["btn-login"]}
-              >
-=======
         <div className={classes["form-input"]}>
           <div className={classes["form-list"]}>
             <Input type="text" placeholder="Login" />
             <Input type="password" placeholder="Password" />
             <div className={classes["form-btn"]}>
               <Button type="submit" className={classes["form-btn"]}>
->>>>>>> origin/master
                 Login
               </Button>
             </div>
@@ -115,9 +82,6 @@ const LoginPage = () => {
           <div className={classes["form-forgot"]}>
             <span className={classes.forgot}>Forgot password</span>
             <div className={classes["form-or"]}>
-<<<<<<< HEAD
-              <span className={classes.or}>or</span>
-=======
               <span className={classes["bg-dark"]}>or</span>
             </div>
           </div>
@@ -138,7 +102,6 @@ const LoginPage = () => {
               <span className={classes["policy-text"]}>
                 Policies and regulations
               </span>
->>>>>>> origin/master
             </div>
           </div>
           <div className={classes["btn-internet"]}>
@@ -162,7 +125,7 @@ const LoginPage = () => {
           <div className={classes["form-rules"]}>
             <span className={classes.rules}>Policies and regulations</span>
           </div>
-        </form>
+        </div>
       </div>
     </>
   );
