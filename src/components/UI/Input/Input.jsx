@@ -1,4 +1,5 @@
 import React from "react";
+<<<<<<< HEAD
 
 const Input = ({ type, placeholder, onChange, value }) => {
   return (
@@ -10,6 +11,14 @@ const Input = ({ type, placeholder, onChange, value }) => {
         onChange={onChange}
         value={value}
       />
+=======
+import classes from "./../Input/Input.module.css";
+
+const Input = ({ type, placeholder }) => {
+  return (
+    <>
+      <input type={type} placeholder={placeholder} />
+>>>>>>> origin/master
     </>
   );
 };

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Link, useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 import {
@@ -16,6 +17,13 @@ import { addUser } from "../../actions/storeActions";
 import { auth } from "../../firebase/firebase";
 import classes from "./../LoginPage/LoginPage.module.css";
 import { toast } from "react-toastify";
+=======
+import Button from "../../components/UI/Button/Button";
+import Header from "../../components/Layout/Header/Header";
+import Input from "../../components/UI/Input/Input";
+import React from "react";
+import classes from "./../LoginPage/LoginPage.module.css";
+>>>>>>> origin/master
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
@@ -71,6 +79,7 @@ const LoginPage = () => {
       <Header />
       <div className={classes["form-login"]}>
         <h1>Login</h1>
+<<<<<<< HEAD
         <form className={classes["form-control"]}>
           <div>
             <Input
@@ -91,6 +100,14 @@ const LoginPage = () => {
                 type="submit"
                 className={classes["btn-login"]}
               >
+=======
+        <div className={classes["form-input"]}>
+          <div className={classes["form-list"]}>
+            <Input type="text" placeholder="Login" />
+            <Input type="password" placeholder="Password" />
+            <div className={classes["form-btn"]}>
+              <Button type="submit" className={classes["form-btn"]}>
+>>>>>>> origin/master
                 Login
               </Button>
             </div>
@@ -98,7 +115,30 @@ const LoginPage = () => {
           <div className={classes["form-forgot"]}>
             <span className={classes.forgot}>Forgot password</span>
             <div className={classes["form-or"]}>
+<<<<<<< HEAD
               <span className={classes.or}>or</span>
+=======
+              <span className={classes["bg-dark"]}>or</span>
+            </div>
+          </div>
+          <div className={classes["btn-list"]}>
+            <Button type="button" className={classes["btn-facebook"]}>
+              Facebook
+            </Button>
+            <Button type="button" className={classes["btn-google"]}>
+              Google
+            </Button>
+          </div>
+          <div className={classes["form-register"]}>
+            <div className={classes.register}>
+              <p>Not have account?</p>
+              <span className={classes["register-text"]}>Register now</span>
+            </div>
+            <div className={classes.policy}>
+              <span className={classes["policy-text"]}>
+                Policies and regulations
+              </span>
+>>>>>>> origin/master
             </div>
           </div>
           <div className={classes["btn-internet"]}>
