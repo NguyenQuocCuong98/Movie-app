@@ -9,8 +9,6 @@ import {
 import Button from "../../components/UI/Button/Button";
 import Header from "../../components/Layout/Header/Header";
 import Input from "../../components/UI/Input/Input";
-import { addUser } from "../../actions/storeActions";
-import { auth } from "../../firebase/firebase";
 import classes from "./../LoginPage/LoginPage.module.css";
 import { signInWithPopup } from "firebase/auth";
 import { toast } from "react-toastify";
@@ -69,6 +67,7 @@ const LoginPage = () => {
       <Header />
       <div className={classes["form-login"]}>
         <h1>Login</h1>
+
         <div className={classes["form-input"]}>
           <div className={classes["form-list"]}>
             <Input type="text" placeholder="Login" />
@@ -106,7 +105,7 @@ const LoginPage = () => {
           </div>
           <div className={classes["btn-internet"]}>
             <Button
-              onClick={() => handlerSignIn(facebookProvider)}
+              // onClick={() => handlerSignIn(facebookProvider)}
               type="button"
               className={classes["btn-facebook"]}
             >
