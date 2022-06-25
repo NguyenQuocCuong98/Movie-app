@@ -34,6 +34,7 @@ const Register = () => {
       setEmailIsValid(false);
       setPasswordIsValid(false);
       await register(email, password);
+      console.log(email,password);
       navigate("/login");
       setIsLoading(false);
     } catch (error) {
@@ -48,28 +49,24 @@ const Register = () => {
       <div className={classes["form-login"]}>
         <h1>Register an account</h1>
         <form className={classes["form-control"]}>
-          <div>
-            <Input
-              type="text"
-              placeholder="Email"
-              onChange={emailInputChangeHandler}
-              value={email}
-            />
-            {emailIsValid && (
-              <p className={classes.error}>Email must not be empty</p>
-            )}
-          </div>
-          <div>
-            <Input
-              type="password"
-              placeholder="Password"
-              onChange={passwordInputChangeHandler}
-              value={password}
-            />
-            {passwordIsValid && (
-              <p className={classes.error}>Password must not be empty</p>
-            )}
-          </div>
+          <Input
+            type="text"
+            placeholder="Email"
+            onChange={emailInputChangeHandler}
+            value={email}
+          />
+          {emailIsValid && (
+            <p className={classes.error}>Email must not be empty</p>
+          )}
+          <Input
+            type="password"
+            placeholder="Password"
+            onChange={passwordInputChangeHandler}
+            value={password}
+          />
+          {passwordIsValid && (
+            <p className={classes.error}>Password must not be empty</p>
+          )}
           <div className={classes["form-forgot"]}>
             <span className={classes.forgot}>
               When you click the subscribe button

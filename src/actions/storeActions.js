@@ -14,6 +14,6 @@ import { db } from "../firebase/firebase";
 import { toast } from "react-toastify";
 
 export const addUser = async (user) => {
-  const useRef = await addDoc(collection(db, "user"), user);
+  const useRef = await addDoc(collection(db, "users"), user);
   return useRef;
 };

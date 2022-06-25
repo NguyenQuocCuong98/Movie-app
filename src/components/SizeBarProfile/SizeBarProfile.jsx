@@ -1,6 +1,14 @@
 import React from "react";
-import classes from "../SizeBar/SizeBar.module.css";
-const SizeBar = () => {
+import { auth } from "../../firebase/firebase";
+import classes from "../SizeBarProfile/SizeBarProfile.module.css";
+import { signOut } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
+const SizeBarProfile = () => {
+  const navigate = useNavigate()
+  const logout = () => {
+    signOut(auth)
+    navigate('/login')
+  }
   return (
     <div className={classes.container}>
       <div className={classes.wrapper}>
@@ -30,11 +38,11 @@ const SizeBar = () => {
           <p>Watching</p>
           <p>Favorite</p>
           <p>Activation code</p>
-          <p>Log out</p>
+          <p onClick={logout}>Log out</p>
         </div>
       </div>
     </div>
   );
 };
 
-export default SizeBar;
+export default SizeBarProfile;

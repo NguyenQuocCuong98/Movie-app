@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Modal from "../../UI/Modal";
 import classes from "../../Layout/NavRight/NavRight.module.css";
-import { selectUser } from "../../../Redux/User-slice";
+import { selectUser } from "../../../Redux/user-slice";
 import { useSelector } from "react-redux";
 
 const NavRight = () => {
@@ -14,15 +14,12 @@ const NavRight = () => {
     <div className={classes["nav-right"]}>
       <SearchIcon className={classes.icon} />
       <button>Buy Package</button>
-      {!user ? (
+      {user ? (
         <Link to={"/profile"}>
-          <img
-            className={classes.avatar}
-            src="https://static.fptplay.net/static/img/share/structure/08_05_2015/default_user_icon08-05-2015_16g50-27.jpg?w=50"
-          />
+          <img className={classes.avatar} src={user.photoURL} alt="avatar" />
         </Link>
       ) : (
-        <Link to={"/login"}>
+        <Link style={{ textDecoration: "none" }} to={"/login"}>
           <p>Login</p>
         </Link>
       )}

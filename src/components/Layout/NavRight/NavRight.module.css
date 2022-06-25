@@ -23,7 +23,8 @@
 
 .icon {
   color: #fff;
-  width: 24px;
+  max-width: 25px;
+  width: 100%;
   height: 55px;
   cursor: pointer;
 }

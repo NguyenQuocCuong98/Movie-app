@@ -1,11 +1,11 @@
 import ProfileContent from "../../components/ProfileContent/ProfileContent";
 import React from "react";
-import SizeBar from "../../components/SizeBar/SizeBar";
+import SizeBarProfile from "../../components/SizeBarProfile/SizeBarProfile";
 import classes from "../Profile/Profile.module.css";
 const Profile = () => {
   return (
     <div className={classes["container-profile"]}>
-      <SizeBar />
+      <SizeBarProfile />
       <ProfileContent />
     </div>
   );

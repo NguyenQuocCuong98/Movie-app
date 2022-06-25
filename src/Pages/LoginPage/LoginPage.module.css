@@ -2,7 +2,7 @@
   text-align: center;
   margin: 0 auto;
   padding-top: 120px;
-  max-width: 385px;
+  max-width: 352px;
 }
 h1 {
   margin-bottom: 20px;
@@ -114,6 +114,10 @@ h1 {
 .policy-text,
 .register-text {
   color: #b4b4b4;
+}
+
+.register-text {
+  margin-left: 5px;
 }
 
 p {

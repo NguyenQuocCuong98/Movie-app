@@ -1,30 +1,24 @@
 import { Route, Routes } from "react-router-dom";
-import { login, logout } from "./Redux/User-slice";
+import { login, logout, selectUser } from "./Redux/user-slice";
+import { useDispatch, useSelector } from "react-redux";
 
 import Header from "./components/Layout/Header/Header";
 import { auth } from "./firebase/firebase";
 import { route } from "./Pages/route";
-import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 
 function App() {
   const dispatch = useDispatch();
   useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged((userAuth) => {
-      if (userAuth) {
-        dispatch(
-          login({
-            uid: userAuth.uid,
-            email: userAuth.email,
-          })
-        );
+    auth.onAuthStateChanged((authUser) => {
+      if(authUser) {
+        dispatch(login(authUser));
+        return
       } else {
-        // Log out
-        dispatch(logout);
+        dispatch(logout())
       }
-    });
-    return unsubscribe;
-  }, []);
+    })
+  },[dispatch]);
   return (
     <>
       <Header />
